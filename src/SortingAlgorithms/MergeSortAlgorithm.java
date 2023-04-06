@@ -4,8 +4,9 @@ public class MergeSortAlgorithm {
     
     // Method to perform Merge Sort
     public static void mergeSort(int[] arr){
+        // If the array is empty or has only one element, it is already sorted
         if (arr.length < 2) {
-            return; // Already sorted
+            return;
         }
         
         int[] temp = new int[arr.length];
@@ -52,7 +53,9 @@ public class MergeSortAlgorithm {
         }
         
         // Copy merged elements from temp array to original array
-        System.arraycopy(temp, low, arr, low, high - low + 1);
+        for (int m = low; m <= high; m++) {
+            arr[m] = temp[m];
+        }
     }
 }
 
