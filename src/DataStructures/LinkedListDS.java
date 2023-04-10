@@ -87,7 +87,7 @@ public class LinkedListDS<E> {
     }
 
     // Delete at the beginning
-    public void deleteFirst(){
+    public void removeFirst(){
         if (isEmpty()){
             throw new IllegalStateException("List is empty");
         }
@@ -96,14 +96,14 @@ public class LinkedListDS<E> {
     }
 
     // Delete at the end
-    public void deleteLast() {
+    public void removeLast() {
         // Check if the list is empty
         if (isEmpty()) {
             throw new IllegalStateException("List is empty");
         }
         // Check if there's only one element
         if (this.size == 1) {
-            deleteFirst();
+            removeFirst();
             return;
         }
 
@@ -118,19 +118,19 @@ public class LinkedListDS<E> {
     }
 
     // Delete at a given index
-    public void delete(int index) {
+    public void remove(int index) {
         // Check if index is out of bounds
         if (index < 0 || index >= this.size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
         // Check if index is 0
         if (index == 0) {
-            deleteFirst();
+            removeFirst();
             return;
         }
         // Check if index is the last element
         if (index == this.size - 1) {
-            deleteLast();
+            removeLast();
             return;
         }
         // Iterate over the list until the node before the given index is found
