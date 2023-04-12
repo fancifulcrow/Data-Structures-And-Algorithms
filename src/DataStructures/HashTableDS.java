@@ -107,7 +107,7 @@ public class HashTableDS<K, V> {
 
     // Check if the hash map contains a given value
     public boolean containsValue(V value) {
-        // Traverse through the entire hashmap and return true if found
+        // Traverse through the hashmap and return true if found
         for (int i = 0; i < capacity; i++) {
             Entry<K, V> entry = table[i];
             while (entry != null) {
@@ -119,4 +119,26 @@ public class HashTableDS<K, V> {
         }
         return false;
     }
+
+    // Print the hashmap
+    public void print(){
+        // Traverse through the hashmap and print out the entries
+        for(int i = 0; i < capacity; i++){
+            Entry<K, V> entry = table[i];
+            while(entry != null){
+                System.out.print(entry.getKey() + " -> " + entry.getValue() + ", ");
+                entry = entry.next;
+            }
+        }
+        System.out.println();
+    }
+
+    // Clear all elements in the hash table
+    public void clear(){
+        // Traverse through the hashmap and remove each entry
+        for (int i = 0; i < capacity; i++) {
+            table[i] = null;
+        }
+        size = 0;
+    }    
 }

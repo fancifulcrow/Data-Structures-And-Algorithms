@@ -8,5 +8,16 @@ public class Testing {
         }
         
         System.out.println(hashMapDS.containsValue(441));
+
+        StackDS<Integer> stackDS = new StackDS<>(10);
+        for(int i = 0; i < 10; i++){
+            stackDS.push(i * 2);
+        }
+
+        stackDS.print();
+        hashMapDS.print();
+
+        QueueDS<String> queueDS = new QueueDS<>(10);
+        queueDS.print();
     }
 }

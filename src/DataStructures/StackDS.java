@@ -6,15 +6,15 @@ public class StackDS<E> {
 
     // constructor to create a stack of given size
     @SuppressWarnings("unchecked")
-    public StackDS(int size){
+    public StackDS(int capacity){
         this.top = -1;
-        this.arr = (E[]) new Object[size];
+        this.arr = (E[]) new Object[capacity];
     }
 
     // adds an element to the top of the stack
     public void push(E value){
         // check if the stack is full
-        if (top == arr.length - 1) {
+        if (top == arr.length - 1){
             throw new IllegalStateException("Stack is full");
         }
         top++;
@@ -34,7 +34,7 @@ public class StackDS<E> {
 
     // returns the top element of the stack without removing it
     public E peek(){
-        if (top == -1) {
+        if (top == -1){
             throw new IllegalStateException("Stack is empty");
         }
         return arr[top];
@@ -61,6 +61,14 @@ public class StackDS<E> {
         return top + 1;
     }
 
+    // Print the stack
+    public void print(){
+        for(int i = 0; i <= top; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    
     // clears all elements from the stack
     public void clear(){
         top = -1;
