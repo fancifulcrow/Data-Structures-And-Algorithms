@@ -105,6 +105,11 @@ public class HashTableDS<K, V> {
         return this.size;
     }
 
+    // Checks if the hash map contains a given key
+    public boolean containsKey(K key) {
+        return get(key) != null;
+    }
+
     // Check if the hash map contains a given value
     public boolean containsValue(V value) {
         // Traverse through the hashmap and return true if found

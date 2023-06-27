@@ -82,6 +82,7 @@ This is a brief description of the public methods of the HashTableDS clas:
 - **get(K key):** Retrieves the value associated with the specified key from the hash table.
 - **remove(K key):** Removes the key-value pair for the specified key from the hash table.
 - **size():** Returns the current number of key-value pairs in the hash table.
+- **containsKey(K key):** Checks id the hash table contains a specific key.
 - **containsValue(V value):** Checks if the hash table contains a specific value.
 - **print():** Prints all the key-value pairs stored in the hash table.
 - **clear():** Removes all elements from the hash table.
