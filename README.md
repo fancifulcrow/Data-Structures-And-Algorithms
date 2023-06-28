@@ -34,58 +34,80 @@ The following are part of the DataStructures package
 The LinkedListDS class has the following methods:
 
 - **LinkedListDS():** Constructor creates an empty linked list by initializing the head to null and the size to 0.
-- **size():** Returns the number of elements in the linked list.
-- **isEmpty():** Returns true if the linked list is empty, false otherwise.
-- **insertFirst(E value):** Inserts an element with the given value at the beginning of the linked list.
-- **insert(E value):** Inserts an element with the given value at the end of the linked list.
-- **insert(int index, E value):** Inserts an element with the given value at the given index of the linked list.
-- **removeFirst():** Deletes the first element in the linked list.
-- **removeLast():** Deletes the last element in the linked list.
-- **remove(int index):** Deletes the element at the given index of the linked list.
-- **getFirst():** Returns the value of the first element in the linked list.
-- **getLast():** Returns the value of the last element in the linked list.
-- **get(int index):** Returns the value of the element at the given index of the linked list.
-- **print():** Prints the elements of the linked list.  
+- **int size():** Returns the number of elements in the linked list.
+- **boolean isEmpty():** Returns true if the linked list is empty, false otherwise.
+- **void insertFirst(E value):** Inserts an element with the given value at the beginning of the linked list.
+- **void insert(E value):** Inserts an element with the given value at the end of the linked list.
+- **void insert(int index, E value):** Inserts an element with the given value at the given index of the linked list.
+- **void remove(E value):** Deletes a given value from the linked list.
+- **void removeFirst():** Deletes the first element in the linked list.
+- **void removeLast():** Deletes the last element in the linked list.
+- **void removeAtIndex(int index):** Deletes the element at the given index of the linked list.
+- **E getFirst():** Returns the value of the first element in the linked list.
+- **E getLast():** Returns the value of the last element in the linked list.
+- **E get(int index):** Returns the value of the element at the given index of the linked list.
+- **void print():** Prints the elements of the linked list.
+- **void clear():** Remove all elements in the linked list.
 
 #### **Stack (StackDS)**
 
 Here is a summary of what each method in the StackDS class does:
 
 - **StackDS(int size):** Constructor that creates a new stack with the specified size.
-- **push(E value):** Adds a new element to the top of the stack.
-- **pop():** Removes and returns the top element of the stack.
-- **peek():** Returns the top element of the stack without removing it.
-- **isEmpty():** Checks if the stack is empty.
-- **isFull():** Checks if the stack is full.
-- **size():** Returns the number of elements in the stack.
-- **clear():** Removes all elements from the stack.
+- **void push(E value):** Adds a new element to the top of the stack.
+- **E pop():** Removes and returns the top element of the stack.
+- **E peek():** Returns the top element of the stack without removing it.
+- **boolean isEmpty():** Checks if the stack is empty.
+- **boolean isFull():** Checks if the stack is full.
+- **int size():** Returns the number of elements in the stack.
+- **void print():** Prints out the elements of the stack from bottom to top.
+- **void clear():** Removes all elements from the stack.
 
 #### **Queue (QueueDS)**
 
 These are the methods of the QueueDS class:
 
 - **QueueDS(int capacity):** Constructor that creates a new instance of the queue with the specified capacity.
-- **enqueue(E value):** Inserts the specified element at the rear of the queue.
-- **dequeue():** Removes and returns the element at the front of the queue.
-- **front():** Returns the element at the front of the queue without removing it.
-- **rear():** Returns the element at the rear of the queue without removing it.
-- **size():** Returns the current number of elements in the queue.
-- **isEmpty():** Checks if the queue is empty.
-- **isFull():** Checks if the queue is full.
-- **print():** Prints the elements of the queue from front to rear.
+- **void enqueue(E value):** Inserts the specified element at the rear of the queue.
+- **E dequeue():** Removes and returns the element at the front of the queue.
+- **E front():** Returns the element at the front of the queue without removing it.
+- **E rear():** Returns the element at the rear of the queue without removing it.
+- **int size():** Returns the current number of elements in the queue.
+- **boolean isEmpty():** Checks if the queue is empty.
+- **boolean isFull():** Checks if the queue is full.
+- **void print():** Prints the elements of the queue from front to rear.
+- **void clear():** Removes all elements from the queue.
 
 #### **HashTable (HashTableDS)**
 
 This is a brief description of the public methods of the HashTableDS clas:
 
-- **insert(K key, V value):** Inserts a key-value pair into the hash table.
-- **get(K key):** Retrieves the value associated with the specified key from the hash table.
-- **remove(K key):** Removes the key-value pair for the specified key from the hash table.
-- **size():** Returns the current number of key-value pairs in the hash table.
-- **containsKey(K key):** Checks id the hash table contains a specific key.
-- **containsValue(V value):** Checks if the hash table contains a specific value.
-- **print():** Prints all the key-value pairs stored in the hash table.
-- **clear():** Removes all elements from the hash table.
+- **void insert(K key, V value):** Inserts a key-value pair into the hash table.
+- **V get(K key):** Retrieves the value associated with the specified key from the hash table.
+- **void remove(K key):** Removes the key-value pair for the specified key from the hash table.
+- **int size():** Returns the current number of key-value pairs in the hash table.
+- **boolean containsKey(K key):** Checks id the hash table contains a specific key.
+- **boolean containsValue(V value):** Checks if the hash table contains a specific value.
+- **void print():** Prints all the key-value pairs stored in the hash table.
+- **void clear():** Removes all elements from the hash table.
+- **K[] keySet():** Returns an array of the keys in the hash table.
+
+#### **Graph (GraphDS)**
+
+The GraphDS class has following methods:
+
+- **GraphDS(boolean isDirected):** Constructor to create a new graph and specify whether the graph is directed or undirected.
+- **void addVertex(E vertex):** Adds a new vertex to the graph.
+- **void addEdge(E source, E destination):** Adds a new edge between two vertices in the graph. If the vertices do not exist, they will be added.
+- **void removeVertex(E vertex):** Removes a vertex and all its associated edges from the graph.
+- **void removeEdge(E source, E destination):** Removes an edge between two vertices from the graph.
+- **int verticesCount():** Returns the number of vertices in the graph.
+- **int edgesCount():** Returns the number of edges in the graph.
+- **boolean hasVertex(E vertex):** Checks whether a given vertex exists in the graph.
+- **boolean hasEdge(E source, E destination):** Checks whether a given edge exists in the graph.
+- **boolean isDirectedGraph():** Checks whether the graph is directed or undirected.
+- **void print():** Prints out the adjacency map representation of the graph.
+- **void clear():** Clears the graph by removing all vertices and edges.
 
 
 
