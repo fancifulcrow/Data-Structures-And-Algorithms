@@ -86,6 +86,34 @@ public class LinkedListDS<E> {
         this.size++;
     }
 
+    // Delete a node with a given value from the linked list
+    public void remove(E value){
+        // Check if linked list is empty
+        if (isEmpty()){
+            throw new IllegalStateException("Linked list is empty");
+        }
+
+        // Check if the node to be removed is the head node
+        if (head.value.equals(value)){
+            removeFirst();
+            return;
+        }
+
+        // Iterate over the list until the node before the node to be removed is found
+        Node<E> current = head;
+        while (current.next != null){
+            if (current.next.value.equals(value)){
+                current.next = current.next.next;
+                size--;
+                return;
+            }
+            current = current.next;
+        }
+
+        // throw an exception if value is not found
+        throw new IllegalArgumentException("Value not found in the linked list");
+    }
+
     // Delete at the beginning
     public void removeFirst(){
         if (isEmpty()){
@@ -118,7 +146,7 @@ public class LinkedListDS<E> {
     }
 
     // Delete at a given index
-    public void remove(int index) {
+    public void removeAtIndex(int index) {
         // Check if index is out of bounds
         if (index < 0 || index >= this.size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
@@ -177,14 +205,28 @@ public class LinkedListDS<E> {
         return current.value;
     }
 
+    // Check whether a given value exists in the linked list
+    public boolean containsValue(E value){
+        // Iterate over the list
+        Node<E> current = this.head;
+        while (current != null){
+            // Check if the value of the current node is equal to the given value
+            if (current.value.equals(value)){
+                return true;
+            }
+            current = current.next;
+        }
+        // return false if the value is not found
+        return false;
+    }
+
     // Print the linked list
     public void print() {
         Node<E> current = this.head;
         while (current != null) {
-            System.out.print(current.value + " ");
+            System.out.print(current.value + "    ");
             current = current.next;
         }
-        System.out.println();
     }
 
     // Clear all elements in the linked list

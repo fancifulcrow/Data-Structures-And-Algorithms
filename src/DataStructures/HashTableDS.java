@@ -125,13 +125,13 @@ public class HashTableDS<K, V> {
         return false;
     }
 
-    // Print the hashmap
+    // Print the hash map
     public void print(){
         // Traverse through the hashmap and print out the entries
         for(int i = 0; i < capacity; i++){
             Entry<K, V> entry = table[i];
             while(entry != null){
-                System.out.print(entry.getKey() + " -> " + entry.getValue() + ", ");
+                System.out.print(entry.getKey() + " : " + entry.getValue() + ", ");
                 entry = entry.next;
             }
         }
@@ -145,5 +145,27 @@ public class HashTableDS<K, V> {
             table[i] = null;
         }
         size = 0;
-    }    
+    }
+
+    // Returns an array of all keys in the hash map
+    @SuppressWarnings("unchecked")
+    public K[] keySet(){
+        // Create an array to store the keys
+        K[] keys = (K[]) new Object[size];
+        int keysIndex = 0;
+
+        // Iterate over the hash table
+        for (int i = 0; i < capacity; i++){
+            Entry<K, V> entry = table[i];
+
+            // Traverse each linked list
+            while (entry != null){
+                // Add the key to the keys array
+                keys[keysIndex++] = entry.getKey();
+                entry = entry.next;
+            }
+        }
+
+        return keys;
+    }
 }

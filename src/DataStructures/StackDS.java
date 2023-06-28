@@ -64,7 +64,7 @@ public class StackDS<E> {
     // Print the stack
     public void print(){
         for(int i = 0; i <= top; i++){
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + "    ");
         }
         System.out.println();
     }
