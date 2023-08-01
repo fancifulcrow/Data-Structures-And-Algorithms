@@ -115,9 +115,9 @@ The GraphDS class has following methods:
 
 For searching algorithms, only 2 are looked into here:
 
-#### **Linear Search**
+### **Linear Search**
 Linear search is a simple searching algorithm that sequentially checks each element in a list or array until a match is found or the end of the list is reached. It is applicable to both sorted and unsorted lists.
-#### **Binary Search**
+### **Binary Search**
 Binary search is a search algorithm used to find the position or index of a target value within a sorted list or array. It follows a divide-and-conquer strategy by repeatedly dividing the search space in half until the target value is found or the search space is empty.
 
 
@@ -126,13 +126,13 @@ Binary search is a search algorithm used to find the position or index of a targ
 
 Under the SortingAlgorithms package, these are the algorithms that are implemented:
 
-#### **Bubble Sort** 
+### **Bubble Sort** 
 Bubble sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order.
-#### **Selection Sort** 
+### **Selection Sort** 
 Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of the array and placing it at the beginning of the sorted part of the array.
-#### **Insertion Sort** 
+### **Insertion Sort** 
 Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is based on the idea that one element from the input elements is consumed in each iteration to find its correct position in the sorted array.
-#### **Merge Sort** 
+### **Merge Sort** 
 Merge sort is a sorting algorithm that divides an array into two halves, sorts each half recursively, and then merges the two halves back together. It is a divide-and-conquer algorithm.
-#### **Quicksort** 
+### **Quicksort** 
 Quick sort is a comparison-based algorithm that works by selecting a pivot element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.
