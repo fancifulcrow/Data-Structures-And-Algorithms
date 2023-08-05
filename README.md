@@ -29,7 +29,7 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 The following are part of the DataStructures package   
 
-#### **Linked List (LinkedListDS)**
+### **Linked List (LinkedListDS)**
 
 The LinkedListDS class has the following methods:
 
@@ -49,7 +49,7 @@ The LinkedListDS class has the following methods:
 - **void print():** Prints the elements of the linked list.
 - **void clear():** Remove all elements in the linked list.
 
-#### **Stack (StackDS)**
+### **Stack (StackDS)**
 
 Here is a summary of what each method in the StackDS class does:
 
@@ -63,7 +63,7 @@ Here is a summary of what each method in the StackDS class does:
 - **void print():** Prints out the elements of the stack from bottom to top.
 - **void clear():** Removes all elements from the stack.
 
-#### **Queue (QueueDS)**
+### **Queue (QueueDS)**
 
 These are the methods of the QueueDS class:
 
@@ -78,7 +78,7 @@ These are the methods of the QueueDS class:
 - **void print():** Prints the elements of the queue from front to rear.
 - **void clear():** Removes all elements from the queue.
 
-#### **HashTable (HashTableDS)**
+### **HashTable (HashTableDS)**
 
 This is a brief description of the public methods of the HashTableDS clas:
 
@@ -92,7 +92,7 @@ This is a brief description of the public methods of the HashTableDS clas:
 - **void clear():** Removes all elements from the hash table.
 - **K[] keySet():** Returns an array of the keys in the hash table.
 
-#### **Graph (GraphDS)**
+### **Graph (GraphDS)**
 
 The GraphDS class has following methods:
 
